@@ -32,11 +32,10 @@ class MyFtp():
         建立FTP链接
         '''
         print('Connecting to FTP:')
-        with ftplib.FTP(self.host) as ftp:
-            ftp = ftplib.FTP(self.host)
-            response = ftp.login(self.user, self.pwd)
-            print(response)
-            return ftp
+        ftp = ftplib.FTP(self.host)
+        response = ftp.login(self.user, self.pwd)
+        print(response)
+        return ftp
 
     def upload_dir(self, local_dir, remote_dir):
         '''
@@ -127,4 +126,4 @@ class MyFtp():
 if __name__ == "__main__":
     my_ftp = MyFtp()
     my_ftp.delete_ftp_files(my_ftp.remote_path)
-    my_ftp.upload_dir(my_ftp.local_path, my_ftp.remote_path)
+    # my_ftp.upload_dir(my_ftp.local_path, my_ftp.remote_path)
