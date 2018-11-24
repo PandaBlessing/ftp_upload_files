@@ -1,0 +1,12 @@
+{
+    "start": "me",
+    "me": {
+        "host": "xxx",
+        "user": "xxx",
+        "port": 21,
+        "pwd": "xxx",
+        "remote_path": "/var/www/pb_me/res",
+        "local_path": "/Users/panda/Downloads/res",
+        "not_upload_list": [".DS_Store"]
+    }
+}
