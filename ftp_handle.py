@@ -87,8 +87,7 @@ class MyFtp():
             print('忽略该文件=== ', local_path)
             return
         f = open(local_path, 'rb')
-        block_size = 0
-        ftp.storbinary('STOR ' + remote_path, f, block_size)
+        ftp.storbinary('STOR ' + remote_path, f)
         print('上传完成，存储位置=== ', os.path.dirname(remote_path))
 
     def delete_ftp_files(self, path):
