@@ -103,6 +103,7 @@ class MyFtp():
                     ftp.rmd(p)
                     print('删除目录=== ', p)
                 except Exception as e:
+                    print('删除失败=== ', p)
                     print('不存在该目录=== ', e)
                     pass
             else:
